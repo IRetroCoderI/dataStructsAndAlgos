@@ -2,14 +2,18 @@ package classes_and_objects;
 
 public class main {
     public static void main(String[] args) {
-        robo robot1 = new robo();
+        Robo robot1 = new Robo();
         robot1.color = "red";
         robot1.name = "Tom";
         robot1.weight = 40;
 
-        robo robot2 = new robo("Jerry", 60, "blue");
+        Robo robot2 = new Robo("Jerry", 60, "blue");
+        Person p1 = new Person("Harry", "aggressive", false);
+        p1.robotOwned = robot2;
+        robot2.friendsWith = robot1;
+        robot1.friendsWith = robot2;
+        p1.robotOwned.friendsWith.introduceSelf();
 
-        robot1.introduceSelf();
-        robot2.introduceSelf();
+        p1.robotOwned.introduceSelf();
     }
 }

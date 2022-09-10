@@ -1,14 +1,15 @@
 package classes_and_objects;
 
-public class robo {
+public class Robo {
     String color;
     int weight;
     String name;
+    Robo friendsWith;
 
-    robo(){
+    Robo(){
 
     }
-    robo(String name, int weight, String color){
+    Robo(String name, int weight, String color){
         this.name = name;
         this.weight = weight;
         this.color = color;
