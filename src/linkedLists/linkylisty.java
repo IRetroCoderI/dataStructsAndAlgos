@@ -1,4 +1,5 @@
 package linkedLists;
+
 import java.util.LinkedList;
 public class linkylisty {
     public static void main(String[] args) {
