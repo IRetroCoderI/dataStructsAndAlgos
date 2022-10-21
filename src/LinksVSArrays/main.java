@@ -19,8 +19,27 @@ public class main {
             link.add(i);
             array.add(i);
         }
-        System.out.println(link.size());
-        System.out.println(array.size());
+
+
+        //______________LinkedList______________
+        startTime = System.nanoTime();
+        link.get(0);
+        endTime = System.nanoTime();
+
+        elapsedTime = endTime - startTime;
+        System.out.println("LinkedList:\t" + elapsedTime + " ns");
+
+
+
+
+
+        //______________ArrayList______________
+        startTime = System.nanoTime();
+        array.get(0);
+        endTime = System.nanoTime();
+
+        elapsedTime = endTime - startTime;
+        System.out.println("ArrayList:\t" + elapsedTime + " ns");
 
     }
 }
