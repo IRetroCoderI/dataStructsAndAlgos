@@ -8,7 +8,18 @@ public class Dynamic {
 
         ArrayList<String> DynamicArray = new ArrayList<String>();
         DynamicArray dynamicArray = new DynamicArray(7);//cap = 10 default
-        System.out.println(dynamicArray.capacity);
+
+        dynamicArray.add("A");
+        dynamicArray.add("B");
+        dynamicArray.add("C");
+        System.out.println(dynamicArray);
+        System.out.println(dynamicArray.isEmpty());
+        System.out.println(dynamicArray.size + " " + dynamicArray.capacity);
+
+        dynamicArray.insert(1, "AA");
+
+        System.out.println(dynamicArray);
+
 
 
 

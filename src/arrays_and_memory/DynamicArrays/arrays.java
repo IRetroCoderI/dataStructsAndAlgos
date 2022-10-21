@@ -1,4 +1,4 @@
-package arrays_and_memory;
+package arrays_and_memory.DynamicArrays;
 
 public class arrays {
     public static void main(String[] args) {
