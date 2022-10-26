@@ -19,8 +19,19 @@ public class main {
             link.add(i);
             array.add(i);
         }
-        System.out.println(link.size());
-        System.out.println(array.size());
+//ArrayLISTS
+        startTime = System.nanoTime();
+        array.remove(0);
+        endTime = System.nanoTime();
+        elapsedTime = endTime - startTime;
+
+        System.out.println("ArrayLists:\t" + elapsedTime + "ns");
+//LinkedLISTS
+        startTime = System.nanoTime();
+        link.remove(0);
+        endTime = System.nanoTime();
+        elapsedTime = endTime - startTime;
+        System.out.println("LinkedList:\t" + elapsedTime + "ns");
 
     }
 }
