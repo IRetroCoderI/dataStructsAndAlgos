@@ -19,8 +19,6 @@ public class main {
             link.add(i);
             array.add(i);
         }
-<<<<<<< HEAD
-
 
         //______________LinkedList______________
         startTime = System.nanoTime();
@@ -41,7 +39,6 @@ public class main {
 
         elapsedTime = endTime - startTime;
         System.out.println("ArrayList:\t" + elapsedTime + " ns");
-=======
 //ArrayLISTS
         startTime = System.nanoTime();
         array.remove(0);
@@ -55,7 +52,7 @@ public class main {
         endTime = System.nanoTime();
         elapsedTime = endTime - startTime;
         System.out.println("LinkedList:\t" + elapsedTime + "ns");
->>>>>>> d7333b54a4bceb01912fc96bddc6dd7b5c761c4a
+
 
     }
 }
