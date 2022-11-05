@@ -1,34 +1,57 @@
 package Searching;
 import java.util.Arrays;
 
+
 public class Binary {
     public static void main(String[] args) {
-        int[] arr = {1, 3, 4, 7, 8, 9, 11, 13, 20, 44, 52, 55, 60, 300, 405};
-        int target = 11;
+        int[] array = new int[1_000_000_000];
+
+        int target = 42;
+
+        for(int i = 0; i<array.length; i++){
+            array[i] = i; //will fill with nums
+        }
+        long startTime = System.nanoTime();
+        int index = BinarySearch(array, target);
+        long endTime = System.nanoTime();
+
+        double elapsed = (endTime - startTime)/1_000_000_000.0;
+
+//        System.out.println("Target found in " + elapsed +  " seconds");
 
 
-        System.out.println(binarySearchRecursion(arr, 0, arr.length-1, target));
+        int middle = array[(array.length-1)/2];
+        System.out.println(middle);
+
+
     }
 
-    public static int binarySearchRecursion(int[] arr, int start, int end, int target){
+
+    public static int BinarySearch(int[] array, int target){
+        int low = 0;
+        int high = array.length - 1;
 
 
-        if(start > end){
-            return -1;
-        }
+        while(low<high){
+            int middle = low + (high - low)/2;
+            int value = array[middle];
 
-        int mid = (start+end)/2;
+            System.out.println("middle: " + value);
 
-
-        if(arr[mid] == target){
-            return mid;
-        } else if(target > arr[mid]){
-            return binarySearchRecursion(arr, mid+1, end, target);
-        } else if(target < arr[mid]){
-            return binarySearchRecursion(arr, start, mid-1, target);
+            if(value<target) low = middle + 1;
+            else if(value>target) high = middle -1;
+            else return middle; // target found!!!
         }
 
         return -1;
+
+
+
+
+
     }
+
+
+
 
 }
