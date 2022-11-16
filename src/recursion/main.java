@@ -2,20 +2,31 @@ package recursion;
 
 public class main {
     public static void main(String[] args) {
-        System.out.println(factorial(6));
-        System.out.println(fib(6));
+//        walk(5);
+//        walkrec(5);
+        System.out.println(fact(10));
+
     }
-    static int factorial(int n){ //creates factorials using recursion
-        if(n>=1){
-            return n * factorial(n-1);
+    public static void walk(int steps){
+        for(int i = 1; i<=steps; i++){
+            System.out.println(i + " step");
+        }
+    }
+    public static void walkrec(int steps){
+        if(steps > 1){
+            System.out.print(" step\n");
+            walkrec(steps-1);
         } else {
-            return 1;
+            System.out.print("step!");
         }
 
     }
-    static int fib(int n){ //fibonacci sequence
-        if (n>=3){
-            return fib(n-1) + fib(n-2);
-        } else { return 1; }
+    public static int fact(int n){
+        if(n<1){ //
+            return 1;
+        } else {
+            return n * fact(n-1);
+        }
+
     }
 }
